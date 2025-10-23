@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
+  color: #fff;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-bg: #09090b;
+  --secondary-bg: #141319;
+  --tertiary-bg: #17171c;
+}
+
+.sp-text {
+  /* Tailwind color equivalents (default Tailwind v3) */
+  --tw-gradient-from: #60A5FA;  /* blue-400 */
+  --tw-gradient-via:  #3B82F6;  /* blue-500 */
+  --tw-gradient-to:   #A1A1AA;  /* zinc-400 */
+
+  /* combine stops exactly like Tailwind does when using from/via/to */
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+
+  /* the arbitrary bg value -> background-image */
+  background-image: conic-gradient(at top, var(--tw-gradient-stops));
+
+  /* make the background visible only through the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* show background instead of text color */
+  color: transparent;
+}
+
+.icon{
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #1f2937;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--secondary-bg);
+}
