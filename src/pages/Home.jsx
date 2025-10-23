@@ -36,6 +36,8 @@ const Home = () => {
   const [isNewTabOpen, setIsNewTabOpen] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
 
+  const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+
   // ✅ Extract code safely
   function extractCode(response) {
     const match = response.match(/```(?:\w+)?\n?([\s\S]*?)```/);
@@ -44,7 +46,7 @@ const Home = () => {
 
   // ⚠️ API Key (you said you want it inside the file)
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyDv5y1BX5ypCDutMrJF0OvWxtUyA3QFnQA"
+    apiKey: apiKey
   });
 
   // ✅ Improved AI Response Handler with Retry & Error Messages
