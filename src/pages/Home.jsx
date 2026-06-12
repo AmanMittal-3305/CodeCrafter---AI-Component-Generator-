@@ -291,7 +291,7 @@ Requirements:
                 </div>
 
                 {/* Editor / Preview */}
-                <div className="h-full">
+                <div className="h-[calc(100%-100px)]">
                   {tab === 1 ? (
                     <Editor value={code} height="100%" theme='vs-dark' language="html" />
                   ) : (
